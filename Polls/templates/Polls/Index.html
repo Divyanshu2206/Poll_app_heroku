@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Polls App</title>
+</head>
+
+<body>
+    <h1>Welcome to polls.</h1>
+    {% for q in qst %}
+        <a href="{% url 'showchoices' q.id %}">{{q.question_text}}</a>
+
+    {% endfor %}
+</body>
+
+</html>
